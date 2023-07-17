@@ -9,3 +9,66 @@ h4 {
 .rating span {
   margin: 0.1rem;
 }
+
+.home-screen-product {
+  text-decoration: none;
+}
+
+.home-screen-product :hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.carousel-caption h2 {
+  visibility: hidden;
+}
+
+.carousel img {
+  height: 200px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+@media (min-width: 476px) {
+  .carousel-caption h2 {
+    visibility: visible;
+    font-size: 1rem;
+    color: #fff;
+  }
+  .carousel img {
+    height: 300px;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-caption h2 {
+    visibility: visible;
+    font-size: 1.5rem;
+  }
+}
+
+.carousel a {
+  margin: 0 auto;
+}

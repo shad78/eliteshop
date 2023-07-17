@@ -11,7 +11,7 @@ export default function Product({ product }) {
           <Card.Img src={product.image} variant="top" />
         </Link>
         <Card.Body>
-          <Link to={`/products/${product._id}`}>
+          <Link to={`/products/${product._id}`} className="home-screen-product">
             <Card.Title as="div">
               <strong>{product.name}</strong>
             </Card.Title>
