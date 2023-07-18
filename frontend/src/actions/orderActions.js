@@ -59,7 +59,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(`https://eliteshop.onrender.com/api/orders`, order, config);
+    const { data } = await axios.get(`https://eliteshop.onrender.com/api/orders/${id}`, config);
 
     dispatch({
       type: ORDER_DETAILS_SUCCESS,
@@ -95,7 +95,7 @@ export const payOrder =
       };
 
       const { data } = await axios.put(
-        `/api/orders/${orderId}/pay/`,
+        `https://eliteshop.onrender.com/api/orders/${orderId}/pay/`,
         paymentResult,
         config
       );
