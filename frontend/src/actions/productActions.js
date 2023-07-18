@@ -35,7 +35,7 @@ export const listProducts =
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    const { data } = await axios.get(`https://eliteshop.onrender.com/api/products?pageNumber=${pageNumber}`);
+    const { data } = await axios.get(`https://eliteshop.onrender.com/api/products/${id}`);
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
       payload: data,
