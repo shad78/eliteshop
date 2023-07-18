@@ -25,7 +25,7 @@ export const login = (email, password) => async (dispatch) => {
         "Content-type": "application/json",
       },
     };
-    const { data } = await axios.get(`https://eliteshop.onrender.com/api/products/top`);
+    const { data } = await axios.post(`https://eliteshop.onrender.com/api/users/login`, { email, password }, config);
     dispatch({
       type: USER_LOGIN_SUCCESS,
       payload: data,
