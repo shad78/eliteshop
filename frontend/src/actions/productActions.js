@@ -16,9 +16,7 @@ export const listProducts =
   async (dispatch) => {
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
-      const { data } = await axios.get(
-        `/api/products?pageNumber=${pageNumber}`
-      );
+      const { data } = await axios.get(`https://eliteshop.onrender.com/api/products?pageNumber=${pageNumber}`);
       dispatch({
         type: PRODUCT_LIST_SUCCESS,
         payload: data,
@@ -37,7 +35,7 @@ export const listProducts =
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await axios.get(`https://eliteshop.onrender.com/api/products?pageNumber=${pageNumber}`);
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
       payload: data,
@@ -56,7 +54,7 @@ export const listProductDetails = (id) => async (dispatch) => {
 export const listTopProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_TOP_REQUEST });
-    const { data } = await axios.get(`/api/products/top`);
+    const { data } = await axios.get(`https://eliteshop.onrender.com/api/products/top`);
     dispatch({
       type: PRODUCT_TOP_SUCCESS,
       payload: data,
