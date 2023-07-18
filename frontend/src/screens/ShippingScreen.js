@@ -11,12 +11,12 @@ export default function ShippingScreen() {
   const { shippingAddress } = cart;
 
   const navigate = useNavigate();
-  const [address, setAddress] = useState(shippingAddress?.address || "");
-  const [city, setCity] = useState(shippingAddress?.city || "");
+  const [address, setAddress] = useState(shippingAddress?.address || "Demo Address");
+  const [city, setCity] = useState(shippingAddress?.city || "New Delhi");
   const [postalCode, setPostalCode] = useState(
-    shippingAddress?.postalCode || ""
+    shippingAddress?.postalCode || "110017"
   );
-  const [country, setCountry] = useState(shippingAddress?.country || "");
+  const [country, setCountry] = useState(shippingAddress?.country || "India");
 
   const dispatch = useDispatch();
 
